@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./favicon.png" />
+        <link rel="manifest" href="/cubex/assets/manifest-C8SizNGP.json" />
+        <title>CUBEX</title>
+      <script type="module" crossorigin src="/cubex/assets/index-C6UGKMJW.js"></script>
+      <link rel="stylesheet" crossorigin href="/cubex/assets/index-JIqZ5hiR.css">
+    </head>
+    <body class="disabled">
+        <div class="settings" tabindex="-1">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="settings-x"
+            >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <h2>Settings</h2>
+            <table>
+                <tr>
+                    <td>Inspection</td>
+                    <td><div class="toggle-btn" data-state="0" data-type="inspection"></div></td>
+                </tr>
+                <tr>
+                    <td>Cube</td>
+                    <td><div class="toggle-btn" data-state="0" data-type="cube"></div></td>
+                </tr>
+                <tr>
+                    <td>Cube map</td>
+                    <td><div class="toggle-btn" data-state="0" data-type="cubeMap"></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="global-cover"></div>
+        <header class="head load">
+            <div class="display-notation"></div>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="settings-btn"
+            >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                ></path>
+            </svg>
+        </header>
+        <div class="container load">
+            <div class="timer" data-phase="0" data-time="0.0">0.0</div>
+            <div class="timer-cover">
+                <video
+                    src="/cubex/assets/vid-DNf2jXXB.mp4"
+                    hidden
+                    width="0"
+                    height="0"
+                    loop="true"
+                ></video>
+            </div>
+            <div class="cube-wrapper">
+                <div class="cube-2d-wrapper">
+                    <canvas class="cube-2d"></canvas>
+                </div>
+                <div class="cube-3d-wrapper">
+                    <canvas class="cube-3d"></canvas>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="average-container load">
+                <table tabindex="none" class="stats">
+                    <tr>
+                        <th>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                id="Open--Streamline-Majesticons"
+                                height="16"
+                                width="16"
+                            >
+                                <desc>
+                                    Open Streamline Icon:
+                                    https://streamlinehq.com
+                                </desc>
+                                <path
+                                    stroke="#ffffff"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.3333"
+                                    d="M6.666666666666666 2.6666666666666665H4a1.3333333333333333 1.3333333333333333 0 0 0 -1.3333333333333333 1.3333333333333333v8a1.3333333333333333 1.3333333333333333 0 0 0 1.3333333333333333 1.3333333333333333h8a1.3333333333333333 1.3333333333333333 0 0 0 1.3333333333333333 -1.3333333333333333v-2.6666666666666665m-5.333333333333333 -1.3333333333333333 5.333333333333333 -5.333333333333333m0 0v3.333333333333333m0 -3.333333333333333h-3.333333333333333"
+                                ></path>
+                            </svg>
+                        </th>
+                        <th>Current</th>
+                        <th>Best</th>
+                    </tr>
+                    <tr class="time">
+                        <th>Time</th>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr class="mo3">
+                        <th>mo3</th>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr class="ao5">
+                        <th>ao5</th>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr class="ao12">
+                        <th>ao12</th>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr class="ao100">
+                        <th>ao100</th>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                    </tr>
+                </table>
+                <div class="chart-container chart-load" tabindex="-1">
+                    <canvas class="chart"></canvas>
+                </div>
+            </div>
+        </footer>
+        <div class="see-time-container" tabindex="-1">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="see-time-x"
+            >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <h3>Solve #1</h3>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <td>n/a</td>
+                </tr>
+                <tr>
+                    <th>Scramble</th>
+                    <td>n/a</td>
+                </tr>
+                <tr>
+                    <th>Time</th>
+                    <td>n/a</td>
+                </tr>
+            </table>
+        </div>
+        <div class="session" style="display: none" tabindex="-1">
+            <div class="msg" tabindex="-1">
+                <span>Download Session?</span>
+                <div class="btn-wrapper">
+                    <div class="yes-btn">Yes</div>
+                    <div class="no-btn">No</div>
+                </div>
+            </div>
+            <div class="session-group" tabindex="-1" style="display: none">
+                <h3>Sessions</h3>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="session-group-x"
+                >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <div class="wrapper">
+                    <div class="session-itm" data-id="1">Session 1</div>
+                    <div class="session-itm" data-id="2">Session 2</div>
+                    <div class="session-itm" data-id="3">Session 3</div>
+                    <div class="session-itm" data-id="4">Session 4</div>
+                </div>
+                <div class="add-session-btn">Add Session</div>
+            </div>
+            <div class="rename-msg" tabindex="-1">
+                <h3>Rename session?</h3>
+                <input tabindex="-1" type="text" maxlength="15" />
+                <div class="rename-btn">Rename</div>
+            </div>
+            <div class="delete-msg" tabindex="-1">
+                <h3>Delete solve?</h3>
+                <div class="btns">
+                    <div class="yes-btn">Yes</div>
+                    <div class="no-btn">No</div>
+                </div>
+            </div>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="session-x"
+            >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <div class="top">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="import"
+                >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-edit"
+                >
+                    <path
+                        d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                    ></path>
+                </svg>
+                <div class="session-name">Session 1</div>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="delete-all-btn"
+                >
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                    ></path>
+                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="export"
+                >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+            </div>
+            <div class="table-wrapper" tabindex="none">
+                <table class="main">
+                    <tr>
+                        <td>#</td>
+                        <td>Time</td>
+                        <td>OK</td>
+                        <td>+2</td>
+                        <td>DNF</td>
+                        <td>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="see-time"
+                            >
+                                <path
+                                    d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                                ></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </td>
+                        <td>
+                            <svg
+                                class="solve-x"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
