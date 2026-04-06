@@ -3,11 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="./favicon.png" />
-        <link rel="manifest" href="/cubex/assets/manifest-C8SizNGP.json" />
-        <title>CUBEX</title>
-      <script type="module" crossorigin src="/cubex/assets/index-C6UGKMJW.js"></script>
-      <link rel="stylesheet" crossorigin href="/cubex/assets/index-JIqZ5hiR.css">
+        <link rel="icon" type="image/xml+svg" href="favicon.svg" />
+        <title>Cubex</title>
+      <script type="module" crossorigin src="./assets/index-_KP9W7N8.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-CE7xo-Ow.css">
     </head>
     <body class="disabled">
         <div class="settings" tabindex="-1">
@@ -30,15 +29,33 @@
             <table>
                 <tr>
                     <td>Inspection</td>
-                    <td><div class="toggle-btn" data-state="0" data-type="inspection"></div></td>
+                    <td>
+                        <div
+                            class="toggle-btn"
+                            data-state="0"
+                            data-type="inspection"
+                        ></div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Cube</td>
-                    <td><div class="toggle-btn" data-state="0" data-type="cube"></div></td>
+                    <td>
+                        <div
+                            class="toggle-btn"
+                            data-state="0"
+                            data-type="cube"
+                        ></div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Cube map</td>
-                    <td><div class="toggle-btn" data-state="0" data-type="cubeMap"></div></td>
+                    <td>
+                        <div
+                            class="toggle-btn"
+                            data-state="0"
+                            data-type="cubeMap"
+                        ></div>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -67,7 +84,7 @@
             <div class="timer" data-phase="0" data-time="0.0">0.0</div>
             <div class="timer-cover">
                 <video
-                    src="/cubex/assets/vid-DNf2jXXB.mp4"
+                    src="./assets/vid-DNf2jXXB.mp4"
                     hidden
                     width="0"
                     height="0"
@@ -242,15 +259,15 @@
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="white"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="import"
                 >
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="17 8 12 3 7 8"></polyline>
-                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -294,15 +311,15 @@
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="white"
+                    stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="export"
                 >
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
                 </svg>
             </div>
             <div class="table-wrapper" tabindex="none">
@@ -326,10 +343,9 @@
                                 stroke-linejoin="round"
                                 class="see-time"
                             >
-                                <path
-                                    d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                                ></path>
-                                <circle cx="12" cy="12" r="3"></circle>
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
                             </svg>
                         </td>
                         <td>
