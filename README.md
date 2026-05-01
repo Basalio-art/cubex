@@ -44,20 +44,41 @@ npm install
 
 ### 2. Development
 
+```bash
 npm run dev
+```
 
 ### 3. Build for Platforms
 
+-   Package script:
+    ```json
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "sync:android": "vite build && npx cap sync android",
+        "open:android": "vite build && npx cap sync android && npx cap open android",
+        "dev:electron": "vite build && concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+        "build:electron": "vite build && electron-builder"
+    }
+    ```  
+
 -   Web Preview:
+    ```bash
     npm run preview
+    ```
 
 -   Windows (Electron):
+    ```bash
     npm run dev:electron # For development
     npm run build:electron # To generate .exe setup
+    ```
 
 -   Android (Capacitor):
+    ```bash
     npm run sync:android # Build and sync to Android project
     npm run open:android # Open in Android Studio
+    ```
 
 ## ⚖️ License
 
