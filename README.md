@@ -110,4 +110,4 @@ SOFTWARE.
 
 Author: [Basalio-art](https://github.com/Basalio-art)
 
-Project Link: https://github.com/Basalio-art/cubex
+Project Link: https://basalio-art.github.io/cubex
